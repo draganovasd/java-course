@@ -1,0 +1,17 @@
+public class Second {
+
+	public static void main(String[] args) {
+    int a=5,b=8;
+    System.out.print("a=" +a);
+    System.out.print("b="+b);
+    a = a + b; 
+    b = a - b;
+    a = a - b;
+    System.out.print("a= "+ a);
+    System.out.print("b= "+b);
+    
+    
+
+	}
+
+}

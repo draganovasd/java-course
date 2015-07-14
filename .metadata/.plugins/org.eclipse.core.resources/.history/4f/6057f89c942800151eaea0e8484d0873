@@ -1,0 +1,24 @@
+
+import java.util.Scanner;
+public class Seventh {
+//  boolean result = true;
+//	  System.out.println(result);
+	public static void main(String[] args) {
+	Scanner input = new Scanner(System.in, "UTF-8");
+	
+	System.out.println("Please input number ! ");
+	System.out.println();
+	
+	System.out.print("chislo= "); // въвеждаме числото;
+	int chislo=input.nextInt();
+	boolean result1=true, result2=false;
+	if(chislo%5==0 && chislo%7==0) //проверява дали числото се дели без остатък на 5 и на 7
+	{
+	 System.out.println("The result is "+result1);
+	}
+	else 
+	System.out.println("The result is "+result2);
+	 input.close();
+	}
+  
+}
