@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class MinAndMax {
+
+
+public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int max = Integer.MIN_VALUE;
+        int number = 0;
+        int count_max = 0;
+        while (true) {
+            number = input.nextInt();
+            if (number == 0) {
+                break;
+            }
+            if(max == number){
+                count_max++;
+            }
+            if (max < number) {
+                max=number;
+                count_max = 1;
+            }
+        }
+        System.out.println("Max Number: " + max);
+        System.out.println("Occurences: " + count_max);
+        input.close();
+    }
+}
+

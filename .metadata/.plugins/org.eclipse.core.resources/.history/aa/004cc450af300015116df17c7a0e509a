@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class MinAndMax {
+
+
+public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int max = Integer.MIN_VALUE;
+        int number = 0;
+       
+        while (true) {
+            number = input.nextInt();
+            if (number == 0) {
+                break;
+            }
+            if(max == number){
+                
+            }
+            if (max < number) {
+                max=number;
+                
+            }
+        }
+        System.out.println("Max Number: " + max);
+        input.close();
+    }
+}
+

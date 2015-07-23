@@ -1,0 +1,24 @@
+//Ќапишете програма, ко€то пресм€та N!/K! за дадени N и K (1<K<N). 
+import java.util.Scanner;
+public class NfactorialM {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in, "UTF-8");
+		System.out.print("Input N: ");
+		int N=input.nextInt();
+		//System.out.print("Input K: ");
+		//int K=input.nextInt();
+		int i;
+		int factorial;
+		for( i=1; i<=N ;i++){
+			i++;
+		}
+		factorial=i*(i-1);
+		System.out.println(factorial);
+		input.close();
+		
+
+		
+	}
+
+}

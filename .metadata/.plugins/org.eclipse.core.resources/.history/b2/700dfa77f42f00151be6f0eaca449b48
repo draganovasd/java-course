@@ -1,0 +1,13 @@
+public class FromOneToHundred {
+
+	public static void main(String[] args) {
+		double number=0;
+		number++;
+		while(number%7==0 || number%11==0);{
+			System.out.println(number);
+			number++;
+		}
+
+	}
+
+}

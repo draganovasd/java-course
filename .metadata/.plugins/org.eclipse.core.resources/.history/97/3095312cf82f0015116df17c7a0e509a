@@ -1,0 +1,16 @@
+public class FromOneToHundred {
+
+	public static void main(String[] args) {
+		int number=0;
+		do{
+			if(number%7!=0 && number%11!=0){
+				number++;
+			continue;
+			}else { 
+				number++;
+				System.out.println(number);
+			}
+		}
+		while(number<100);
+}
+}

@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class SummUntilZero {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in, "UTF-8");
+		System.out.print("Iput numbers. For end of imput press 0.");
+		
+		double result=0;
+		do{
+			double number=input.nextDouble();
+			System.out.print("number: "+number);
+			result+=number;
+			
+		}while (number!=0);
+			
+		input.close();
+	}
+
+}
