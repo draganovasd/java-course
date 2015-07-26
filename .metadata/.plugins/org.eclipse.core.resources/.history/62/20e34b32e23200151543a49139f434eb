@@ -1,0 +1,13 @@
+public class From30To1 {
+
+	public static void main(String[] args) {
+		
+		int Array[][] = new int[5][6];
+		
+
+		
+		
+
+	}
+
+}
