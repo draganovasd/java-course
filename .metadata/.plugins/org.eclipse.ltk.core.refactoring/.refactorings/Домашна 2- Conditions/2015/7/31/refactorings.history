@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;sc&apos; in &apos;NumbersToText.main(...)&apos; to &apos;input&apos;&#x0D;&#x0A;- Original project: &apos;Домашна 2- Conditions&apos;&#x0D;&#x0A;- Original element: &apos;NumbersToText.main(String[]).sc&apos;&#x0D;&#x0A;- Renamed element: &apos;sc&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;sc&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{NumbersToText.java[NumbersToText~main~\[QString;@sc!102!146!110!111!QScanner;!0!false" name="input" references="true" stamp="1437936188076" version="1.0"/>
+</session>
