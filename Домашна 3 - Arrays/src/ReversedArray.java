@@ -15,6 +15,7 @@ public class ReversedArray {
 			Array[i] = input.nextInt();
 		}
 		
+		
 		for (int i = 0; i < Array.length ; i++) {
 			reversedArray[i] = Array[n - i - 1];
 		}

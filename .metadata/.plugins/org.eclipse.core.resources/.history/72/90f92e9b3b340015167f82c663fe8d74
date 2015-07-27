@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class InvertedString {
+
+	public static void main(String[] args) {
+		String nameOfString;
+		
+		nameOfString=inputString();
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+	}
+	
+	public static String inputString(){
+		Scanner input = new Scanner(System.in , "UTF-8");
+		String inputString;
+		System.out.println("Please input string: ");
+		inputString=input.nextLine();
+		input.close();
+		return inputString;		
+	}
+
+}
