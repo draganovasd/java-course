@@ -1,0 +1,23 @@
+package Person;
+
+public class Test {
+
+	public static void main(String[] args) {
+		String[] array = {"1A", "5E", "2A", "6B", "4M"};
+		
+		Teacher teacher = new Teacher("Asen", "Ivanov", 5, "Math");
+		Teacher teacher1 = new Teacher("Dragan", "Iordanov", 8, "Art");
+		SchoolTeacher schoolTeacher = new SchoolTeacher("Ivan", "Ivanov", 5, "Math", array);
+    	CollegeTeacher collegeTeacher = new CollegeTeacher("Kaloqn", "Dimitrov", 15, "Physics", "Stamford college");
+		
+//		Lecturer lecturer = new Lecturer("Georgi", "Nikolaev", 10, "Technical University");
+//		Professor professor = new Professor("Petur", "Iliev", 10, "Sofia University", "head");
+//		Assistant assistant = new Assistant("Dimitur", "Nikolov", 6, "Technical University", true);
+//		Assistant assistant1 = new Assistant("Mariqn", "Georgiev", 2, "UNSS", false);
+		
+		System.out.println();
+		
+
+	}
+
+}
