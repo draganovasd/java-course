@@ -5,7 +5,7 @@ public class Test {
 
 	public static void main(String[] args) {
 		
-		
+		System.out.println("There are " +Person.personCount  + " instances made !");
 		System.out.println();
 		System.out.println("Teacher:");
 		
@@ -71,9 +71,7 @@ public class Test {
 	    assistant1.checkHomework();
 		assistant1.checkExam();
 		assistant1.writeArticles();
-		
-		System.out.println();
-		System.out.println("There are " +Person.personCount  + " instances made !");
+
 		
 	}
 
