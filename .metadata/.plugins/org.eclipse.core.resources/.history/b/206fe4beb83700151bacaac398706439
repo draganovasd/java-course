@@ -1,0 +1,27 @@
+package Employee;
+
+public class Policeman extends Employee{
+	private String policemanRank;
+	public Policeman(){
+		super();
+		this.policemanRank=" ";
+	}
+	public Policeman(String rank, int salary, int workHours){
+		super(salary,workHours);
+		setRank(rank);
+		
+	}
+	
+	public void setRank(String Rank){
+		this.policemanRank=Rank;
+		
+	}
+	
+	public String getRank(){
+		return this.policemanRank;
+	}
+	
+	public void printRank(){
+		System.out.print("The rank of the policeman is: "+this.policemanRank);
+	}
+}

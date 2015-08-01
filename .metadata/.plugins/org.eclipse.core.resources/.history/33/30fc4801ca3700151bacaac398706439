@@ -1,0 +1,40 @@
+package Car;
+
+public class Automobile extends Car {
+	private int expense;
+	private String fuel;
+	
+	public Automobile(){
+		this.expense=0;
+		this.fuel="";
+	}
+	
+	public Automobile(int price,int expense, String fuel){
+		super(price);
+		setExpense(expense);
+		setFuel(fuel);
+		
+	}
+	public void setExpense(int expense){
+		this.expense=expense;
+	}
+	public int getexpense(){
+		return this.expense;
+	}
+	public void setFuel(String fuel){
+		this.fuel=fuel;
+	}
+	public String getFuel(){
+		return this.fuel;
+	}
+	public void printFuelAndExpense(){
+		System.out.println("Total expens: "+this.expense);
+		System.out.println("Fuel: "+this.fuel);
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

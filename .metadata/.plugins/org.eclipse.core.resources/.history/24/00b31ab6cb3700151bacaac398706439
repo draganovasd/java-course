@@ -1,0 +1,68 @@
+package Car;
+
+public class Car {
+	private int price;
+	
+	public Car(){
+		this.price=0;
+	}
+
+	public Car(int price) {
+		this();
+		setPrice(price);
+	}
+	public void setPrice(int price){
+		this.price=price;
+	}
+	public int getPrice(){
+		return this.price;
+	}
+	public void printPrice(){
+		System.out.println("The price of the car is: "+price);
+	}
+
+	public static void main(String[] args) {
+		Car[] cars = new Car[10];
+		cars[0] = new SUV(30000, true);
+		cars[1] = new SUV(70000, false);
+		cars[2] = new SUV(25000, false);
+		cars[3] = new SUV(50000, false);
+		cars[4] = new SUV(90000, true);
+		cars[5] = new Automobile(15000, 8);
+		cars[6] = new Automobile(51000, 7);
+		cars[7] = new Automobile(25000, 10);
+		cars[8] = new Automobile(31000, 6);
+		cars[9] = new Automobile(11000, 5);
+
+		sortByPrice(cars);
+		System.out.println("Cars sorted by price: ");
+		printSorted(cars);
+	}
+
+	public static void sortByPrice(Car[] cars) {
+		for (int i = 0; i < cars.length; i++) {
+			for (int j = 0; j < cars.length - 1; j++) {
+				if (cars[j].getPrice() > cars[j + 1].getPrice()) {
+					int temp = cars[j + 1].getPrice();
+					cars[j + 1].setPrice(cars[j].getPrice());
+					cars[j].setPrice(temp);
+				}
+			}
+		}
+
+	}
+
+	public static void printSorted(Car[] cars) {
+		for (int i = 0; i < 5; i++) {
+			cars[i].printPrice();
+			((SUV) cars[i]).printHighly();
+		}
+		for (int j = 5; j < 10; j++) {
+			cars[j].printPrice();
+			((Automobile) cars[j]).printFuelAndExpense();
+		}
+
+
+	}
+
+}

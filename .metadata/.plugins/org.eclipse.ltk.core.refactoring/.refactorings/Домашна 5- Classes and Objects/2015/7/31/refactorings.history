@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;Stock.Vegetables.setMeat(...)&apos; to &apos;setColour&apos;&#x0D;&#x0A;- Original project: &apos;Домашна 5- Classes and Objects&apos;&#x0D;&#x0A;- Original element: &apos;Stock.Vegetables.setMeat(...)&apos;&#x0D;&#x0A;- Renamed element: &apos;Stock.Vegetables.setColour(...)&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;setMeat&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;Stock{Vegetables.java[Vegetables~setMeat~Z" name="setColour" references="true" stamp="1438381227463" version="1.0"/>
+</session>
