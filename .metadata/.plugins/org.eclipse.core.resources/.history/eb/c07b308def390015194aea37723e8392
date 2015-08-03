@@ -1,0 +1,10 @@
+package EmailAndPassword;
+
+public class TestAccAndPass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
