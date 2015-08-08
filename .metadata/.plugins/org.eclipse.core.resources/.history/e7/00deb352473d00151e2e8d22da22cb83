@@ -1,0 +1,13 @@
+package ReversedOrder;
+import java.util.Scanner;
+
+public class ReversedOrder {
+
+	public static void main(String[] args) {
+		 StringBuffer a = new StringBuffer("Java programming is fun");
+	      System.out.println(a.reverse());
+		
+
+	}
+
+}

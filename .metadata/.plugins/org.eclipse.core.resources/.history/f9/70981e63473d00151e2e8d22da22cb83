@@ -1,0 +1,16 @@
+package ReversedOrder;
+import java.util.Scanner;
+
+public class ReversedOrder {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in, "UTF-8");
+		String test=" ";
+		test=input.nextLine();
+		StringBuffer a = new StringBuffer(test);
+	    System.out.println(a.reverse());
+		
+
+	}
+
+}
