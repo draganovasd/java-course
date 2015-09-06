@@ -1,0 +1,116 @@
+package Math;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+import java.util.Stack;
+public class Math {
+
+	public static void main(String[] args) {
+		Scanner input= new Scanner(System.in,"UTF-8");
+		Queue<Character> numbers = new LinkedList<Character>();
+		Stack<Character> symbols = new Stack<Character>();
+		
+		System.out.println("Please input math expression : ");
+		String check = input.nextLine();
+		if(checkNumbers(check)==true && checkOperators(check)==true && checkStartEnd(check)==true && checkCouples(check)==false){
+			
+			char[] Array = check.toCharArray();
+			
+			for (int i = 0; i < Array.length; i++) {
+				if (Character.isDigit(Array[i])) {
+					numbers.offer(Array[i]);
+				} else if (Array[i] == '+' || Array[i] == '-') {
+					symbols.push(Array[i]);
+				}
+			}
+			System.out.println("Stack and Queue ");
+			for (int i = 0; i < symbols.size(); i++) {
+				System.out.println(symbols.get(i));
+			}
+			System.out.println();
+			for (Character num : numbers) {
+				System.out.println(num);
+			}
+			
+			int summ=calculateSum(numbers.poll(), numbers.poll(), symbols.pop());
+			numbers.offer((char)summ);
+			System.out.println();
+			
+			System.out.println("The result of the operation is : " + summ);
+			System.out.println("Final Stack and Queue:");
+			for (int i = 0; i < symbols.size(); i++) {
+				System.out.println(symbols.get(i));
+			}
+			System.out.println();
+			for (Character num : numbers) {
+				System.out.println(num);
+			}
+			
+		}
+		else {
+			System.out.println("Wrong math expresion! Please input correct one !");
+		}
+		input.close();
+	}
+		
+	
+	public static boolean checkNumbers(String input){
+		char [] array=input.toCharArray();
+		boolean contains=false;
+		
+		for(int i=0; i<array.length ; i++){
+			if(Character.isDigit(array[i])){
+				contains = true;
+			}
+			else contains = false;
+		}
+		return contains;
+	}
+	public static boolean checkOperators(String input){
+		char [] array=input.toCharArray();
+		boolean contains=true;
+		
+		for(int i=0; i<array.length ; i++){
+			if(array[i]=='+' || array[i]=='-'){
+				contains = true;
+			}
+			else contains = false;
+		}
+		return contains;
+	}
+	
+	public static boolean checkStartEnd(String input){
+		char [] array=input.toCharArray();
+		boolean check=false;
+		
+		if (Character.isDigit(array[0]) && Character.isDigit(array[array.length - 1])) {
+			check = true;
+		}
+		return check;
+	}
+	
+	public static boolean checkCouples(String input) {
+		char[] array = input.toCharArray();
+		boolean couples = false;
+		
+		for (int i = 1; i < array.length; i++) {
+			if (array[i - 1] == array[i]) {
+				couples = true;
+			}
+		}
+		return couples;
+	}
+	
+	public static int calculateSum(char a, char b, char operator){
+		int first = Character.getNumericValue(a);
+		int second = Character.getNumericValue(b);
+		
+		if (operator == '+') {
+			return first + second;
+		} else if (operator == '-') {
+			return first - second;
+		}
+		return 0;
+	}
+	
+}

@@ -1,0 +1,21 @@
+package Trees;
+public class TreeTest {
+	public static void main(String[] args) {
+		Trees<Integer> root= new Trees<Integer>(8);
+		{
+			Trees<Integer> node9 = root.addChild(9);
+			Trees<Integer> node13= root.addChild(13);
+			Trees<Integer> node15 = root.addChild(15);
+			{
+				Trees<Integer> node20 = node15.addChild(null);
+				Trees<Integer> node89 = node15.addChild(56);
+		    	{
+		    		Trees<Integer> node99=node89.addChild(99);
+		    	}
+			}
+		}
+		root.print(root, 0);
+		int result=root.findDepth(root, 0,99);
+		System.out.println("Depth is: " +result);
+	}
+}

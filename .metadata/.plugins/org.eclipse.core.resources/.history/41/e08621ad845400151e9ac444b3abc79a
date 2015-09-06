@@ -1,0 +1,63 @@
+package Algorithms;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class TenNumbers {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in, "UTF-8");
+		System.out.println("Please input ten numbers !");
+		int [] enter =new int[10];
+		int countOdd=0;
+		int countEven=0;
+		for(int i=0 ; i<enter.length ; i++){
+			enter[i]=input.nextInt();
+		}
+		
+		ArrayList<Integer> oddList = new ArrayList<>();
+		ArrayList<Integer> evenList = new ArrayList<>();
+		
+		for(int i = 0; i < enter.length; i++){
+			if(enter[i]% 2 == 0){
+				evenList.add(enter[i]);
+				countEven++;
+			} else{
+				oddList.add(enter[i]);
+				countOdd++;
+			}
+		}	
+		Integer[] oddArray = new Integer[countOdd];
+		Integer[] evenArray = new Integer[countEven];
+		
+		for(int k = 0; k < evenList.size(); k++){
+			evenArray[k] = evenList.get(k);
+		}
+		
+		for(int l = 0; l < oddList.size(); l++){
+			oddArray[l] = oddList.get(l);
+		}
+		
+		System.out.println("Even Array");
+		for (int i : evenArray) {
+			System.out.print(i + " ");
+		}
+		System.out.println();
+		System.out.println("Odd Array");
+		for (int i : oddArray) {
+			System.out.print(i + " ");
+		}
+		
+		Arrays.sort(oddArray, Collections.reverseOrder());
+		Arrays.sort(evenArray);	
+		System.out.println(" Sorted  Even Array");
+		   for (Integer i : evenArray) {
+	            System.out.println(i.intValue());
+		   }
+	    System.out.println(" Sorted  Odd Array");
+		   for (Integer i : oddArray) {
+	            System.out.println(i.intValue());
+		   }
+	}
+}

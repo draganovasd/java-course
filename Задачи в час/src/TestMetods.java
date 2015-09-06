@@ -1,46 +1,42 @@
-import java.util.Scanner;
-import java.util.Random;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class TestMetods {
 
+    public static void main(String[] args) {
 
-	public static void main(String[] args) {
-		System.out.print("Enter a number between 10 and 30 000: ");
-		int numN=inputNumber();
+        // create map to store
+        Map<String, List<String>> map = new HashMap<String, List<String>>();
 
-		int sumN=sumOfIntegers(numN);
-		
-		System.out.println("The sum of " + numN +  " numbers is: " + sumN);
+        // create list one and store values
+        List<String> valSetOne = new ArrayList<String>();
+        valSetOne.add("Apple");
+        valSetOne.add("Aeroplane");
 
-	}
-	
-	public static int sumOfIntegers(int num){
-		
-		if(num>1){
-			return num + sumOfIntegers(num-1);
-		}else{
-			return 1;
-		}
-	}
-	
-	public static int inputNumber() {
-		Scanner inputs = new Scanner(System.in, "UTF-8");
-		
-		int inputNum=0;
-		
-		
-		while(inputs.hasNextInt()){
-			
-			inputNum = inputs.nextInt();
-			
-			if(inputNum>=10 && inputNum<=30000){
-				break;
-			}
-			
-			System.out.print("Invalid number!\nEnter a number between 10 and 30 000: ");
-		}
-		
-		inputs.close();
-		
-		return inputNum;
-	}
+        // create list two and store values
+        List<String> valSetTwo = new ArrayList<String>();
+        valSetTwo.add("Bat");
+        valSetTwo.add("Banana");
+
+        // create list three and store values
+        List<String> valSetThree = new ArrayList<String>();
+        valSetThree.add("Cat");
+        valSetThree.add("Car");
+
+        // put values into map
+        map.put("A", valSetOne);
+        map.put("B", valSetTwo);
+        map.put("C", valSetThree);
+
+        // iterate and display values
+        System.out.println("Fetching Keys and corresponding [Multiple] Values n");
+        for (Map.Entry<String, List<String>> entry : map.entrySet()) {
+            String key = entry.getKey();
+            List<String> values = entry.getValue();
+            System.out.println("Key = " + key);
+            System.out.println("Values = " + values + "n");
+        }
+    }
 }

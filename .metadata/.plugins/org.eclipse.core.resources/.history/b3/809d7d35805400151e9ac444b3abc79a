@@ -1,0 +1,64 @@
+package Algorithms;
+
+import java.util.Scanner;
+
+public class TenNumbers {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in, "UTF-8");
+		System.out.print("Please input ten numbers !");
+		int [] enter =new int[10];
+		int countOdd=0;
+		int countEven=0;
+		for(int i=0; i<enter.length ; i++){
+			enter[i]=input.nextInt();
+			if(enter[i] %2==0){
+				countEven++;
+			}
+			else countOdd++;
+		}
+		input.close();
+		
+		int[] even= new int[countEven];
+		int [] odd= new int[countOdd];
+		
+		for(int i=0;i<enter.length;i++){
+			if(enter[i]%2==0){
+				even[i]=enter[i];
+			}else{
+				odd[i]=enter[i];
+			}
+		}
+		SortEven(even);
+		SortOdd(odd);
+		
+
+
+
+	}
+	
+	public static void SortEven(int[]arr){
+		for(int i=0;i<arr.length;i++){
+			for(int j=i+1;j<arr.length;j++){
+				if(arr[i]>arr[j]){
+					int temp=arr[i];
+					arr[i]=arr[j];
+					arr[j]=temp;
+				}
+			}
+		}
+	}
+	
+	public static void SortOdd(int[]arr){
+		for(int i=0;i<arr.length;i++){
+			for(int j=i+1;j<arr.length;j++){
+				if(arr[i]>arr[j]){
+					int temp=arr[i];
+					arr[i]=arr[j];
+					arr[j]=temp;
+				}
+			}
+		}
+	}
+
+}
